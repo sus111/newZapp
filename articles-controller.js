@@ -9,11 +9,13 @@ document.addEventListener('DOMContentLoaded', function(){
         for(var i = 0; i < articleElements.length; i++){
           articleElements[i].addEventListener('click', function(clickEvent){
             var buttonNumber = clickEvent.srcElement.classList[1];
-            var apiUrl = result[buttonNumber].apiUrl;
-            articles.getArticle(apiUrl);
+            var webUrl = result[buttonNumber].webUrl;
+            console.log(webUrl);
+            articles.getArticle(webUrl);
         });
       }
 
+        // console.log(result);
       });
     });
 
